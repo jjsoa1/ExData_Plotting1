@@ -14,8 +14,9 @@ multiple_plots <- function() {
   plot(data[['Calendar_Time']], data[['Voltage']], xlab="datetime", ylab="Voltage", type="l")
   
   plot(data[['Calendar_Time']], data[['Sub_metering_1']], xlab="", ylab="Energy sub metering",type="l")
-  lines(data[['Calendar_Time']], data[['Sub_metering_2']], col="red", type="l")
-  lines(data[['Calendar_Time']], data[['Sub_metering_3']], col="blue", type="l")
+  lines(data[['Calendar_Time']], data[['Sub_metering_1']])
+  lines(data[['Calendar_Time']], data[['Sub_metering_2']], col="red")
+  lines(data[['Calendar_Time']], data[['Sub_metering_3']], col="blue")
   legend("topright", lty=1, lwd=1, col=c("black","blue","red"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty="n")
   
   plot(data[['Calendar_Time']], data[['Global_reactive_power']], xlab="datetime", ylab="Global_reactive_power", type="l")
