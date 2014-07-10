@@ -2,8 +2,7 @@ source('read.R')
 
 multiple_plots <- function() {
   data <- read_data("household_power_consumption.txt")
-  legend <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
-  
+
   png(file='plot4.png', width=480, height=480, units='px')
   
   # Set parameters.
@@ -17,7 +16,7 @@ multiple_plots <- function() {
   plot(data[['Calendar_Time']], data[['Sub_metering_1']], type="l", xlab="", ylab="Energy sub metering")
   lines(data[['Calendar_Time']], data[['Sub_metering_2']], type="l", col="red")
   lines(data[['Calendar_Time']], data[['Sub_metering_3']], type="l", col="blue")
-  legend("topright", lty=1, lwd=1, col=c("black","blue","red"), legend=legend, bty="n")
+  legend("topright", lty=1, lwd=1, col=c("black","blue","red"), legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), bty="n")
   
   plot(data[['Calendar_Time']], data[['Global_reactive_power']], xlab="datetime", ylab="Global_reactive_power", type="l")
   
