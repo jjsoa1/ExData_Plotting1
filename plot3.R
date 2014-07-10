@@ -4,6 +4,7 @@ energy_sub_metering <- function() {
   data <- read_data("household_power_consumption.txt")
 
   png(file='plot3.png', width=480, height=480, units='px')
+  par(bg=NA)
   
   # Generate plot.
   plot(data[['Calendar_Time']], data[['Sub_metering_1']], type="l", xlab="", ylab="Energy sub metering")

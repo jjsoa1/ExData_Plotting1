@@ -5,7 +5,7 @@ global_active_power_days <- function() {
   
   # Generate graph and write to png.
   png(file='plot2.png', width=480, height=480, units='px')
-  
+  par(bg=NA)
   plot(x=dat[['Calendar_Time']], y=dat[['Global_active_power']], xlab="", ylab="Global Active Power (kilowatts)", type="l")
   
   dev.off()

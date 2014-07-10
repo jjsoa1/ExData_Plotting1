@@ -6,7 +6,7 @@ multiple_plots <- function() {
   png(file='plot4.png', width=480, height=480, units='px')
   
   # Set parameters.
-  par(mfrow=c(2,2))
+  par(mfrow=c(2,2), bg=NA)
   
   # Generate plots
   plot(data[['Calendar_Time']], data[['Global_active_power']], xlab="", ylab="Global Active Power", type="l")
